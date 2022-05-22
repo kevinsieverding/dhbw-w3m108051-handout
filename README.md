@@ -1,1 +1,1 @@
-# LaTeX Template for Papers at DHBW CAS
+# DHBW CAS W3M10805.1 User Centered Design: Handout
