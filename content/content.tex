@@ -1,14 +1,62 @@
 % !TeX root = ../index.tex
 
-\section{Introduction}
+\section{Einleitung}
 
-\blindtext[2]
-\footcite[]{smith2010wealth}
+Recommender Systems sind aus vielen modernen Informationssystemen nicht mehr wegzudenken.
+Medienplattformen wie Netflix und Spotify nutzen sie um ihren Nutzern ihre scheinbar endlosen Kataloge schmackhafter zu machen, Amazon schlägt jedem ihrer Kunden an jeder nur möglichen Stelle noch weitere Produkte vor die er kaufen wollen könnte.
+Auch die großen Social Media Plattformen nutzen Recommender Systems, um zum Beispiel ihre unendlichen Feeds von Inhalten auf jeden einzelnen Nutzer nach Maß zu schneidern.
 
-\begin{wrapfigure}{l}{0.4\textwidth}
+\section{Recommender Systems}
+
+\citeauthor{burke_hybrid_2002} definiert ein Recommendation System als \enquote{[A]ny system that produces individualized recommendations as output or has the effect of guiding the user in a personalized way to interesting or useful objects in a large space of possible options.} \parencite{burke_hybrid_2002}
+Generell können vier Arten von Recommender Systems unterschieden werden:
+
+\begin{description}
+  \item[collaborative filtering] Generiert Empfehlungen auf Basis von Feedback anderer Nutzer. Zum Beispiel: \enquote{Kunden, die diesen Film mochten, mochten auch \ldots}
+  \parencite{koren_advances_2022}
+  \item[content-based] Generiert Empfehlungen aufgrund von Ähnlichkeiten zwischen den Inhalten für die Empfehlungen generiert werden. Zum Beispiel: \enquote{Diese Produkte sind ähnlich zu dem, welches du gerade in den Warenkorb gelegt hast.}
+  \parencite{musto_semantics_2022}
+  \item[context-aware] Generiert Empfehlungen unter Berücksichtigung des Kontexts. Zum Beispiel: Einem Kunden werden dicke Handschuhe zum Kauf vorgeschlagen, weil es gerade Winter ist.
+  \parencite{adomavicius_context-aware_2022}
+  \item[neural-network-based] Generiert Empfehlungen unter Zuhilfenahme eines neuronalen Netzwerks.
+  \parencite{zhang_deep_2022}
+\end{description}
+
+In der Regel verfolgen die Anbieter von Recommender Systems eines oder mehrere der folgenden Ziele:
+
+\begin{enumerate}
+  \item Mehr Artikel zu verkaufen.
+  \item Mehr unterschiedliche Artikel zu verkaufen.
+  \item Die Loyalität der Kunden zu verbessern.
+  \item Einsichten in die Kunden zu gewinnen.
+  \item Die Kundenzufriedenheit zu steigern.
+\end{enumerate}
+
+\parencite{ricci_recommender_2022}
+
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.35\textwidth]{threepwood.png}
-  \caption{The Greatest Pirate in the World}\label{fig:threepwood}
-\end{wrapfigure}
+  \includegraphics*[width=0.9\textwidth]{rs-process.png}
+  \caption{Der Prozess von Recommendation Systems}\label{fig:process}
+\end{figure}
 
-\blindtext[2]
+Abbildung \ref{fig:process} zeigt den zyklischen Prozess von Recommender Systems.
+Nutzer generieren entweder implizites oder explizites Feedback, welches als Input für einen Recommendation Algorithmus dient, welche Empfehlungen generiert.
+Diese Empfehlungen zielen wiederum darauf ab Nutzerverhalten zu beeinflussen.
+
+\section{Recommender Systems und User Experience Research}
+
+Traditionell wurden Recommender Systems häufig nur anhand der Präzision ihrer Empfehlungen gemessen, jedoch stellte sich heraus, dass auch andere Aspekte wie Bedenken zur Privatsphäre zur endgültigen Nutzererfahrung beitragen.
+
+Aus diesem Grund haben \citeauthor{knijnenburg_explaining_2012} versucht ein Modell zu entwickeln, um Recommendation Systems unter Berücksichtigung aller relevanten Aspekte zu evaluieren.
+Dieses Modell ist in Abbildung \ref{fig:framework} dargestellt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics*[width=0.8\textwidth]{framework.png}
+  \caption{Das Framework zur Evaluierung von RS}\label{fig:framework}
+  \parencite{knijnenburg_explaining_2012}
+\end{figure}
+
+Sie haben dieses Framework bei sechs Feldversuchen mit insgesamt über 550 Probanden angewendet, um es zu validieren.
+Während sechs versuche nicht ausreichend sind, um das Modell wirklich zu validieren, so waren die Ergebnisse doch vielversprechend.
